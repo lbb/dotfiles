@@ -1,5 +1,5 @@
-[submodule "vim/bundle/fugitive"]
-	path = vim/bundle/fugitive
+[submodule "vim/bundle/fugutive"]
+	path = vim/bundle/fugutive
 	url = http://github.com/tpope/vim-fugitive.git
 [submodule "vim/bundle/snipmate"]
 	path = vim/bundle/snipmate
@@ -13,9 +13,6 @@
 [submodule "vim/bundle/acp"]
 	path = vim/bundle/acp
 	url = https://github.com/vim-scripts/AutoComplPop.git
-[submodule "vim/bundle/minibufexpl"]
-	path = vim/bundle/minibufexpl
-	url = https://github.com/sontek/minibufexpl.vim.git
 [submodule "vim/bundle/command-t"]
 	path = vim/bundle/command-t
 	url = https://github.com/wincent/Command-T.git
@@ -37,8 +34,8 @@
 [submodule "vim/bundle/py.test"]
 	path = vim/bundle/py.test
 	url = https://github.com/alfredodeza/pytest.vim.git
-[submodule "vim/bundle/makegreen"]
-	path = vim/bundle/makegreen
+[submodule "vim/bundle/markgreen"]
+	path = vim/bundle/markgreen
 	url = https://github.com/reinh/vim-makegreen
 [submodule "vim/bundle/tasklist"]
 	path = vim/bundle/tasklist
@@ -48,13 +45,10 @@
 	url = https://github.com/vim-scripts/The-NERD-tree.git
 [submodule "vim/bundle/ropevim"]
 	path = vim/bundle/ropevim
-	url = https://github.com/sontek/rope-vim.git
+	url = https://github.com/python-rope/ropevim.git
 [submodule "vim/bundle/tagbar"]
 	path = vim/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
-[submodule "vim/bundle/solarized"]
-	path = vim/bundle/solarized
-	url = git://github.com/altercation/vim-colors-solarized.git
 [submodule "vim/bundle/python-mode"]
 	path = vim/bundle/python-mode
 	url = https://github.com/klen/python-mode.git
@@ -63,4 +57,4 @@
 	url = https://github.com/Rykka/riv.vim
 [submodule "vim/bundle/vimpdb"]
 	path = vim/bundle/vimpdb
-	url = git@github.com:gotcha/vimpdb.git
+	url = https://github.com/gotcha/vimpdb.git
