@@ -1,5 +1,8 @@
 set nocompatible              " dont't be compatible with vi
 
+" import powerline 
+set rtp+=/usr/lib64/python3.3/site-packages/powerline/bindings/vim
+
 let g:pathogen_disabled = ["ropevim", "minibufexpl", "command-t"]
 
 filetype off
@@ -74,7 +77,7 @@ let g:pymode_breakpoint_key = '<leader>ü'
 
 cmap w!! w !sudo tee % >/dev/null   "if forgot sudo save with :w!!
 
-set number                    " Display line numbers
+set relativenumber                    " Display line numbers
 set numberwidth=1             " using only 1 column (and 1 space) while possible
 set wildmenu                  " Menu completion in command mode on <Tab>
 set wildmode=full             " <Tab> cycles between all matching choices.
@@ -98,7 +101,7 @@ filetype on
 filetype plugin on
 filetype plugin indent on
 
-colorscheme gruvbox
+colorscheme default
 set bg=dark
 
 :hi ColorColumn guibg=#2d2d2d ctermbg=246

@@ -8,24 +8,26 @@
 #stored in the dotfiles
 
 dir=$HOME/dotfiles
-print "Start syncing..."
+echo "Start syncing..."
 
-print "Link $HOME/.vimrc"
-ln -s $dir/vim/.vimrc $HOME/.vimrc
-
-print "Next..."
-print "Link vim plugins to $HOME/.vim"
+echo "Link $HOME/.vimrc"
+ln -sf $dir/vim/.vimrc $HOME/.vimrc
+echo "Next..."
+echo "Link vim plugins to $HOME/.vim"
 for file in $dir/vim/*;do
 	#Dont need to care about .vimrc it is not in the iter
-	ln -s $file $HOME/.vim/
+	ln -sf $file $HOME/.vim/
 done
 
-print "Next..."
-print "Link i3 config to $HOME/.i3"
+echo "Next..."
+echo "Link i3 config to $HOME/.i3"
 mkdir -p $HOME/.i3
 for file in $dir/i3/*;do
-	ln -s $file $HOME/.i3/
+	ln -sf $file $HOME/.i3/
 done
-print "Done..."
+echo "Next..."
+echo "Link urxvt config to $HOME/.Xresources"
+ln sf $dir/urxvt/.Xresources $HOME/
+echo "Done..."
 
 

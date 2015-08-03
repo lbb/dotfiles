@@ -1,0 +1,123 @@
+! General
+URxvt.keysym.M-v:   perl:clipboard:paste
+URxvt.keysym.M-v:   perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+URxvt.clipboard.autocopy: If true, PRIMARY overwrites clipboard
+URxvt.perl-ext-common: default,matcher,clipboard
+urxvt*termName:  rxvt-256color
+urxvt*loginShell:         true
+urxvt*scrollBar:          false
+!urxvt*scrollBar_right:    true
+!urxvt*scrollstyle:        plain
+urxvt*secondaryScroll:    true
+urxvt*saveLines:         65535
+urxvt*cursorBlink:       false
+urxvt*urgentOnBell:       true
+!urxvt*override-redirect:false
+!urxvt*borderLess:        true
+urxvt*internalBorder:       0
+urxvt*externalBorder:       0
+!clickable URLS
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/firefox
+URxvt.matcher.button: 1
+URxvt.matcher.rend.0: Uline Bold fg5
+URxvt.clipboard.copycmd:  xclip -i -selection clipboard
+URxvt.clipboard.pastecmd: xclip -o -selection clipboard
+
+! Appearance
+! urxvt*font: xft:Source\ Code\ Pro:Medium:pixelsize=16:antialias=true:hinting=true,Source\ Code\ Pro\ for\ Powerline\:Medium:pixelsize=16:antialias=true:hinting=true,xft:Source\ Code\ Powerline\ for\ Powerline:Medium:pixelsize=13:antialias=true:hinting=true
+! urxvt*font: xft:Deja Vu Sans Mono for Powerline:Medium:pixelsize=10:antialias=true:hinting=true,xft:Powerline\ Symbols:Medium:pixelsize=10,antialias=true:hinting=true,xft:PowerlineSymbols:Medium:pixelsize=10:antialias=true:hinting=true
+! special
+!*.foreground:   #c5c8c6
+!*.background:   #1d1f21
+!*.cursorColor:  #c5c8c6
+
+! black
+!*.color0:       #282a2e
+!*.color8:       #373b41
+
+! red
+!*.color1:       #a54242
+!*.color9:       #cc6666
+
+! green
+!*.color2:       #8c9440
+!*.color10:      #b5bd68
+
+! yellow
+!*.color3:       #de935f
+!*.color11:      #f0c674
+
+! blue
+!*.color4:       #5f819d
+!*.color12:      #81a2be
+
+! magenta
+!*.color5:       #85678f
+!*.color13:      #b294bb
+
+! cyan
+!*.color6:       #5e8d87
+!*.color14:      #8abeb7
+
+! white
+!*.color7:       #0063c5
+!*.color15:      #cfcfcf
+URxvt.scrollBar: false
+URxvt.font: xft:Inconsolata for Powerline:pixelsize=13:antialias=true:hinting=true
+URxvt*dynamicColors: on
+URxvt.cursorBlink: 1
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+!Base16 Ocean
+!Scheme: Chris Kempson (http://chriskempson.com)
+#define base00 #2b303b
+#define base01 #343d46
+#define base02 #4f5b66
+#define base03 #65737e
+#define base04 #a7adba
+#define base05 #c0c5ce
+#define base06 #dfe1e8
+#define base07 #eff1f5
+#define base08 #bf616a
+#define base09 #d08770
+#define base0A #ebcb8b
+#define base0B #a3be8c
+#define base0C #96b5b4
+#define base0D #8fa1b3
+#define base0E #b48ead
+#define base0F #ab7967
+*.foreground: base05
+*.background: base00
+!URxvt.depth: 32
+!URxvt.background: [70]#2b303b
+*.cursorColor: base05
+*.color0: base00
+*.color1: base08
+*.color2: base0B
+*.color3: base0A
+*.color4: base0D
+*.color5: base0E
+*.color6: base0C
+*.color7: base05
+*.color8: base03
+*.color9: base08
+*.color10: base0B
+*.color11: base0A
+*.color12: base0D
+*.color13: base0E
+*.color14: base0C
+*.color15: base07
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*.color16: base09
+*.color17: base0F
+*.color18: base01
+*.color19: base02
+*.color20: base04
+*.color21: base06
