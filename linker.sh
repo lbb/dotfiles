@@ -27,7 +27,7 @@ for file in $dir/i3/*;do
 done
 echo "Next..."
 echo "Link urxvt config to $HOME/.Xresources"
-ln sf $dir/urxvt/.Xresources $HOME/
+ln -sf $dir/urxvt/.Xresources $HOME/
 echo "Done..."
 
 

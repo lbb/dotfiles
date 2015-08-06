@@ -77,8 +77,9 @@ let g:pymode_breakpoint_key = '<leader>ü'
 
 cmap w!! w !sudo tee % >/dev/null   "if forgot sudo save with :w!!
 
-set relativenumber                    " Display line numbers
+set relativenumber            " Display line numbers
 set numberwidth=1             " using only 1 column (and 1 space) while possible
+set number                    " Display absolute linenumbers
 set wildmenu                  " Menu completion in command mode on <Tab>
 set wildmode=full             " <Tab> cycles between all matching choices.
 
