@@ -1,7 +1,7 @@
 set nocompatible              " dont't be compatible with vi
 
 " import powerline 
-set rtp+=/usr/lib64/python3.3/site-packages/powerline/bindings/vim
+set rtp+=/usr/local/lib/python3.4/dist-packages/powerline/bindings/vim
 
 let g:pathogen_disabled = ["ropevim", "minibufexpl", "command-t"]
 

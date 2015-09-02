@@ -14,6 +14,7 @@ echo "Link $HOME/.vimrc"
 ln -sf $dir/vim/.vimrc $HOME/.vimrc
 echo "Next..."
 echo "Link vim plugins to $HOME/.vim"
+mkdir -p $HOME/.vim
 for file in $dir/vim/*;do
 	#Dont need to care about .vimrc it is not in the iter
 	ln -sf $file $HOME/.vim/
