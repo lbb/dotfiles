@@ -21,6 +21,7 @@ call dein#add('majutsushi/tagbar')
 call dein#add('Yggdroot/indentLine')
 call dein#add('blindFS/vim-taskwarrior')
 call dein#add('mattn/webapi-vim')
+call dein#add('Raimondi/delimitMate')
 
 "Unite------------------------------
 call dein#add('Shougo/unite.vim')
@@ -30,8 +31,7 @@ call dein#add('junkblocker/unite-codesearch')
 call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
 
 " Theme------------------------------
-call dein#add('mhartington/oceanic-next')
-call dein#add('ap/vim-css-color') 
+call dein#add('mhartington/oceanic-next') call dein#add('ap/vim-css-color') 
 
 " Autocomplete------------------------------
 call dein#add('Shougo/deoplete.nvim')
@@ -40,8 +40,7 @@ call dein#add('zchee/deoplete-go', {'build': 'make'})
 " Golang------------------------------
 call dein#add('fatih/vim-go')
 
-" Git------------------------------
-call dein#add('tpope/vim-fugitive')
+" Git------------------------------ call dein#add('tpope/vim-fugitive')
 call dein#add('jreybert/vimagit')
 call dein#add('mhinz/vim-signify')
 call dein#add('Xuyuanp/nerdtree-git-plugin')
@@ -51,7 +50,7 @@ call dein#add('scrooloose/nerdtree')
 call dein#add('ryanoasis/vim-devicons')
 
 " Specify revision/branch/tag.
-call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
+call dein#add('Shougo/vimshell')
 
 " Required:
 call dein#end()
@@ -115,13 +114,12 @@ smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
 
 "SuperTab like snippets behavior.
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
- \ "\<Plug>(neosnippet_expand_or_jump)"
- \: pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
- \ "\<Plug>(neosnippet_expand_or_jump)"
- \: "\<TAB>"
-
+"imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+" \ "\<Plug>(neosnippet_expand_or_jump)"
+" \: pumvisible() ? "\<C-n>" : "\<TAB>"
+"smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+" \ "\<Plug>(neosnippet_expand_or_jump)"
+" \: "\<TAB>"
 
 "NERDTree 
 nmap <F3> :NERDTreeToggle<CR>
@@ -186,3 +184,11 @@ let g:unite_data_directory='~/.nvim/.cache/unite'
 let g:unite_source_history_yank_enable=1
 let g:unite_prompt='» '
 let g:unite_source_rec_async_command =['ag', '--follow', '--nocolor', '--nogroup','--hidden', '-g', '', '--ignore', '.git', '--ignore', '*.png', '--ignore', 'lib']
+imap <silent><expr> <TAB>
+\ pumvisible() ? "\<C-n>" :
+\ <SID>check_back_space() ? "\<TAB>" :
+\ deoplete#mappings#manual_complete()
+function! s:check_back_space() "{{{
+let col = col('.') - 1
+return !col || getline('.')[col - 1] =~ '\s'
+endfunction"}}}
