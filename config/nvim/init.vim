@@ -31,7 +31,8 @@ call dein#add('junkblocker/unite-codesearch')
 call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
 
 " Theme------------------------------
-call dein#add('mhartington/oceanic-next') call dein#add('ap/vim-css-color') 
+call dein#add('mhartington/oceanic-next')
+call dein#add('ap/vim-css-color') 
 
 " Autocomplete------------------------------
 call dein#add('Shougo/deoplete.nvim')
@@ -44,7 +45,7 @@ call dein#add('fatih/vim-go')
 call dein#add('jreybert/vimagit')
 call dein#add('mhinz/vim-signify')
 call dein#add('Xuyuanp/nerdtree-git-plugin')
-
+call dein#add('tpope/vim-fugitive')
 "NerdTree
 call dein#add('scrooloose/nerdtree')
 call dein#add('ryanoasis/vim-devicons')
