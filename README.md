@@ -9,6 +9,7 @@ $ pip2 install neovim
 $ pip3 install neovim
 $ pip3 install taskw
 ```
+Install https://github.com/ryanoasis/nerd-fonts
 
-
+### Credits
 Inspired by. @mhartington
