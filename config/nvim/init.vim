@@ -27,7 +27,6 @@ call dein#add('troydm/asyncfinder.vim')
 call dein#add('vim-airline/vim-airline')
 call dein#add('tpope/vim-surround')
 call dein#add('rhysd/github-complete.vim')
-call dein#add('itchyny/vim-cursorword')
 call dein#add('terryma/vim-multiple-cursors')
 call dein#add('tomasr/molokai')
 
@@ -41,7 +40,6 @@ call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
 " Themes:
 call dein#add('mhartington/oceanic-next')
 call dein#add('ap/vim-css-color') 
-" call dein#add('flazz/vim-colorschemes', {'ref':'189f5182bb70fd35d0f56fee451c3f22a2a80135'})
 
 " Autocomplete:
 call dein#add('Shougo/deoplete.nvim')
@@ -119,9 +117,10 @@ let g:deoplete#sources#go = 'vim-go'
 	syntax enable
 	colorscheme molokai 
 	set background=dark
-	highlight MatchParen cterm=bold ctermbg=none ctermfg=red guibg=none guifg=red
 	"set cursorline "slows down bif files due to buffer rewrite
-	"set lazyredraw "**partial fix**
+	highlight MatchParen cterm=bold ctermbg=none ctermfg=red guibg=none guifg=red
+	"autocmd Filetype .* if getfsize(@%) > 999 | setlocal nocursorline
+	"			\setlocal lazyredraw | endif
 
 " airline:
 	let g:airline#extensions#tabline#enabled = 1
