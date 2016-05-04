@@ -25,6 +25,7 @@ call dein#add('mattn/webapi-vim')
 call dein#add('Raimondi/delimitMate')
 call dein#add('troydm/asyncfinder.vim')
 call dein#add('vim-airline/vim-airline')
+call dein#add('tpope/vim-surround')
 
 " Unite:
 call dein#add('Shougo/unite.vim')
@@ -47,7 +48,6 @@ call dein#add('fatih/vim-go')
 
 " Git:
 call dein#add('tpope/vim-fugitive')
-call dein#add('jreybert/vimagit')
 call dein#add('mhinz/vim-signify')
 call dein#add('Xuyuanp/nerdtree-git-plugin')
 call dein#add('tpope/vim-fugitive')
