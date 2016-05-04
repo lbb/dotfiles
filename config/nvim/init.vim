@@ -26,6 +26,8 @@ call dein#add('Raimondi/delimitMate')
 call dein#add('troydm/asyncfinder.vim')
 call dein#add('vim-airline/vim-airline')
 call dein#add('tpope/vim-surround')
+call dein#add('rhysd/github-complete.vim')
+call dein#add('itchyny/vim-cursorword')
 
 " Unite:
 call dein#add('Shougo/unite.vim')
