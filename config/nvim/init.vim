@@ -29,6 +29,7 @@ call dein#add('tpope/vim-surround')
 call dein#add('rhysd/github-complete.vim')
 call dein#add('itchyny/vim-cursorword')
 call dein#add('terryma/vim-multiple-cursors')
+call dein#add('tomasr/molokai')
 
 " Unite:
 call dein#add('Shougo/unite.vim')
@@ -111,13 +112,16 @@ let g:deoplete#sources#go = 'vim-go'
 	"nnoremap <C-K> <C-W><C-K>
 	"nnoremap <C-L> <C-W><C-L>
 	"nnoremap <C-H> <C-W><C-H>
+	
 " Vim color:
 	let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 	let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 	syntax enable
-	colorscheme OceanicNext
+	colorscheme molokai 
 	set background=dark
 	highlight MatchParen cterm=bold ctermbg=none ctermfg=red guibg=none guifg=red
+	set cursorline
+
 " airline:
 	let g:airline#extensions#tabline#enabled = 1
 	"let g:airline_powerline_fonts = 1
