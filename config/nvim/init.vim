@@ -28,6 +28,7 @@ call dein#add('vim-airline/vim-airline')
 call dein#add('tpope/vim-surround')
 call dein#add('rhysd/github-complete.vim')
 call dein#add('itchyny/vim-cursorword')
+call dein#add('terryma/vim-multiple-cursors')
 
 " Unite:
 call dein#add('Shougo/unite.vim')
