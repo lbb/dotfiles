@@ -120,7 +120,8 @@ let g:deoplete#sources#go = 'vim-go'
 	colorscheme molokai 
 	set background=dark
 	highlight MatchParen cterm=bold ctermbg=none ctermfg=red guibg=none guifg=red
-	set cursorline
+	"set cursorline "slows down bif files due to buffer rewrite
+	"set lazyredraw "**partial fix**
 
 " airline:
 	let g:airline#extensions#tabline#enabled = 1
