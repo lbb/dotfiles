@@ -50,7 +50,7 @@ call dein#add('fatih/vim-go')
 
 " Git:
 call dein#add('tpope/vim-fugitive')
-call dein#add('mhinz/vim-signify')
+call dein#add('airblade/vim-gitgutter')
 call dein#add('Xuyuanp/nerdtree-git-plugin')
 call dein#add('tpope/vim-fugitive')
 
@@ -121,6 +121,10 @@ let g:deoplete#sources#go = 'vim-go'
 	highlight MatchParen cterm=bold ctermbg=none ctermfg=red guibg=none guifg=red
 	"autocmd Filetype .* if getfsize(@%) > 999 | setlocal nocursorline
 	"			\setlocal lazyredraw | endif
+" GitGutter:
+let g:gitgutter_realtime = 1
+let g:gitgutter_eager = 1
+
 
 " airline:
 	let g:airline#extensions#tabline#enabled = 1
