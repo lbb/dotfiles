@@ -17,7 +17,6 @@ call dein#add('Shougo/dein.vim')
 call dein#add('suan/vim-instant-markdown', {'on_ft': 'markdown'})
 call dein#add('Shougo/neosnippet.vim')
 call dein#add('Shougo/neosnippet-snippets')
-call dein#add('mhinz/vim-signify')
 call dein#add('majutsushi/tagbar')
 call dein#add('Yggdroot/indentLine')
 call dein#add('blindFS/vim-taskwarrior')
@@ -40,6 +39,7 @@ call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
 " Themes:
 call dein#add('mhartington/oceanic-next')
 call dein#add('ap/vim-css-color') 
+call dein#add('vim-airline/vim-airline-themes')
 
 " Autocomplete:
 call dein#add('Shougo/deoplete.nvim')
@@ -118,19 +118,27 @@ let g:deoplete#sources#go = 'vim-go'
 	colorscheme molokai 
 	set background=dark
 	"set cursorline "slows down bif files due to buffer rewrite
-	highlight MatchParen cterm=bold ctermbg=none ctermfg=red guibg=none guifg=red
+	highlight MatchParen cterm=bold ctermbg=none ctermfg=red
 	"autocmd Filetype .* if getfsize(@%) > 999 | setlocal nocursorline
 	"			\setlocal lazyredraw | endif
+
 " GitGutter:
-let g:gitgutter_realtime = 1
-let g:gitgutter_eager = 1
+	let g:gitgutter_sign_column_always = 1
+	let g:gitgutter_max_signs = 500
+	let g:gitgutter_map_keys = 0
+	let g:gitgutter_override_sign_column_highlight = 0
+	let g:gitgutter_enabled = 1
+	let g:gitgutter_signs = 1
+	let g:gitgutter_async = 1
+	let g:gitgutter_highlight_lines = 0
+	set updatetime=250
 
-
-" airline:
+" Airline:
 	let g:airline#extensions#tabline#enabled = 1
-	"let g:airline_powerline_fonts = 1
-	
-" devicons:
+	let g:airline_theme = 'behelit'
+	let g:airline_powerline_fonts = 1
+
+" Devicons:
 	let g:webdevicons_enable_airline_tabline = 1
 	let g:webdevicons_enable_airline_statusline = 1
 
@@ -183,7 +191,6 @@ let g:gitgutter_eager = 1
 	let g:unite_data_directory='~/.nvim/.cache/unite'
 	let g:unite_source_history_yank_enable=1
 	let g:unite_prompt='» '
-	let g:unite_source_rec_async_command =['ag', '--follow', '--nocolor', '--nogroup','--hidden', '-g', '', '--ignore', '.git', '--ignore', '*.png', '--ignore', 'lib']
 
 " Miscellaneous:
 imap <silent><expr> <TAB>
@@ -202,4 +209,3 @@ autocmd BufReadPost *
  \ endif
 
 autocmd BufRead * normal zz
-
