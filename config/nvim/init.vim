@@ -118,7 +118,7 @@ let g:deoplete#sources#go = 'vim-go'
 	colorscheme molokai 
 	set background=dark
 	"set cursorline "slows down bif files due to buffer rewrite
-	highlight MatchParen cterm=bold ctermbg=none ctermfg=red
+	highlight MatchParen cterm=bold ctermbg=none ctermfg=red guibg=none guifg=red
 	"autocmd Filetype .* if getfsize(@%) > 999 | setlocal nocursorline
 	"			\setlocal lazyredraw | endif
 
