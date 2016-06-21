@@ -20,66 +20,58 @@ xterm*bellIsUrgent: true
 XTerm*faceName: SauceCodePro Nerd Font
 XTerm*faceSize: 10
 
+!.color0:  #101010
+!.color1:  #960050
+!.color2:  #66dd00
+!.color3:  #c47f2c
+!.color4:  #30309b
+!.color5:  #7e40a5
+!.color6:  #3579a8
+!.color7:  #9999aa
+!.color8:  #303030
+!.color9:  #ff0090
+!.color10: #80ff00
+!.color11: #ffba68
+!.color12: #5f5fee
+!.color13: #bb88dd
+!.color14: #4eb4fa
+!.color15: #d0d0d0
 
-! special
-!*.foreground:   #dedede
-!*.background:   #191919
-!*.cursorColor:  #dedede
-
-! black
-!*.color0:       #2e3436
-!*.color8:       #555753
-
-! red
-!*.color1:       #cc0000
-!*.color9:       #ef2929
-
-! green
-!*.color2:       #7cff00
-!*.color10:      #b8f47d
-
-! yellow
-!*.color3:       #ffff00
-!*.color11:      #fce94f
-
-! blue
-!*.color4:       #3465a4
-!*.color12:      #729fcf
-
-! magenta
-!*.color5:       #75507b
-!*.color13:      #ad7fa8
-
-! cyan
-!*.color6:       #06989a
-!*.color14:      #34e2e2
-
-! white
-!*.color7:       #d3d7cf
-!*.color15:      #eeeeec
-
-*.background: #1e1e1e
-*.foreground: #d0d0d0
-
-*.color0:  #101010
-*.color1:  #960050
-*.color2:  #66dd00
-*.color3:  #c47f2c
-*.color4:  #30309b
-*.color5:  #7e40a5
-*.color6:  #3579a8
-*.color7:  #9999aa
-*.color8:  #303030
-*.color9:  #ff0090
-*.color10: #80ff00
-*.color11: #ffba68
-*.color12: #5f5fee
-*.color13: #bb88dd
-*.color14: #4eb4fa
-*.color15: #d0d0d0
-
+*.background:     #1e1e1e
+*.foreground:     #d0d0d0
 *.cursorColor:    #0099ff
 *.cursorColor2:   #000000
 *.highlightColor: #333333
 
+! black
+*.color0:         #181818
+*.color8:         #e7e7ee
+
+! red
+*.color1:         #f30014
+*.color9:         #f81118
+
+! green
+*.color2:         #2bbd4c
+*.color10:        #2dc55e
+
+! yellow
+*.color3:         #e6ae10
+*.color11:        #ecba0f
+
+! blue
+*.color4:         #236ec7
+*.color12:        #2a84d2
+
+! magenta
+*.color5:         #3d43a8
+*.color13:        #4e5ab7
+
+! cyan
+*.color6:         #199ccc
+*.color14:        #139ad6
+
+! white
+*.color7:         #e7e7ee
+*.color15:        #ffffff
 
