@@ -28,6 +28,12 @@ call dein#add('tpope/vim-surround')
 call dein#add('rhysd/github-complete.vim')
 call dein#add('terryma/vim-multiple-cursors')
 call dein#add('tomasr/molokai')
+call dein#add('vimwiki/vimwiki')
+"call dein#add('tbabej/taskwiki')
+"call dein#add('powerman/vim-plugin-AnsiEsc')
+"call dein#add('farseer90718/vim-taskwarrior')
+call dein#add('sjl/gundo.vim')
+call dein#add('edkolev/tmuxline.vim')
 
 " Unite:
 call dein#add('Shougo/unite.vim')
@@ -84,17 +90,17 @@ let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 
 " Go-vim: 
-	let g:go_highlight_functions = 1
-	let g:go_highlight_methods = 1
-	let g:go_highlight_structs = 1
-	let g:go_highlight_interfaces = 1
-	let g:go_highlight_operators = 1
-	let g:go_highlight_build_constraints = 1
-	let g:go_term_enabled = 1
-" let g:go_fmt_command = "goimports" " Is buggy
+"	let g:go_highlight_functions = 1
+"	let g:go_highlight_methods = 1
+"	let g:go_highlight_structs = 1
+"	let g:go_highlight_interfaces = 1
+"	let g:go_highlight_operators = 1
+"	let g:go_highlight_build_constraints = 1
+"	let g:go_term_enabled = 1
+" 	let g:go_fmt_command = "goimports" " Is buggy
 
 set foldmethod=syntax
-set foldlevel=3
+set foldlevel=5
 let g:deoplete#sources#go = 'vim-go'
 
 " indentLine:
@@ -118,7 +124,7 @@ let g:deoplete#sources#go = 'vim-go'
 	colorscheme molokai 
 	set background=dark
 	"set cursorline "slows down bif files due to buffer rewrite
-	highlight MatchParen cterm=bold ctermbg=none ctermfg=red guibg=none guifg=red
+	highlight MatchParen cterm=bold ctermbg=none ctermfg=red
 	"autocmd Filetype .* if getfsize(@%) > 999 | setlocal nocursorline
 	"			\setlocal lazyredraw | endif
 
@@ -209,3 +215,12 @@ autocmd BufReadPost *
  \ endif
 
 autocmd BufRead * normal zz
+
+let g:airline#extensions#tmuxline#enabled = 0
+
+
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
+
+highlight Normal guibg=none
+highlight NonText guibg=none
