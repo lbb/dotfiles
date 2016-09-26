@@ -34,6 +34,7 @@ call dein#add('vimwiki/vimwiki')
 "call dein#add('farseer90718/vim-taskwarrior')
 call dein#add('sjl/gundo.vim')
 call dein#add('edkolev/tmuxline.vim')
+call dein#add('neomake/neomake')
 
 " Unite:
 call dein#add('Shougo/unite.vim')
@@ -46,6 +47,7 @@ call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
 call dein#add('mhartington/oceanic-next')
 call dein#add('ap/vim-css-color') 
 call dein#add('vim-airline/vim-airline-themes')
+call dein#add('mhartington/oceanic-next')
 
 " Autocomplete:
 call dein#add('Shougo/deoplete.nvim')
@@ -66,6 +68,8 @@ call dein#add('ryanoasis/vim-devicons')
 
 " Specify revision/branch/tag:
 call dein#add('Shougo/vimshell')
+call dein#add('godlygeek/tabular')
+call dein#add('plasticboy/vim-markdown')
 
 " Required:
 call dein#end()
@@ -96,8 +100,7 @@ let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const
 "	let g:go_highlight_interfaces = 1
 "	let g:go_highlight_operators = 1
 "	let g:go_highlight_build_constraints = 1
-"	let g:go_term_enabled = 1
-" 	let g:go_fmt_command = "goimports" " Is buggy
+	let g:go_fmt_command = "goimports" " Is buggy
 
 set foldmethod=syntax
 set foldlevel=5
@@ -120,8 +123,11 @@ let g:deoplete#sources#go = 'vim-go'
 " Vim color:
 	let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 	let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+	if (has("termguicolors"))
+		set termguicolors
+	endif
 	syntax enable
-	colorscheme molokai 
+	colorscheme OceanicNext 
 	set background=dark
 	"set cursorline "slows down bif files due to buffer rewrite
 	highlight MatchParen cterm=bold ctermbg=none ctermfg=red
@@ -141,7 +147,7 @@ let g:deoplete#sources#go = 'vim-go'
 
 " Airline:
 	let g:airline#extensions#tabline#enabled = 1
-	let g:airline_theme = 'behelit'
+	let g:airline_theme = 'oceanicnext'  "'behelit'
 	let g:airline_powerline_fonts = 1
 
 " Devicons:
@@ -215,12 +221,13 @@ autocmd BufReadPost *
  \ endif
 
 autocmd BufRead * normal zz
+autocmd! BufWritePost * Neomake
 
 let g:airline#extensions#tmuxline#enabled = 0
 
 
-highlight Normal ctermbg=none
-highlight NonText ctermbg=none
+"highlight Normal ctermbg=none
+"highlight NonText ctermbg=none
 
-highlight Normal guibg=none
-highlight NonText guibg=none
+"highlight Normal guibg=none
+"highlight NonText guibg=none
