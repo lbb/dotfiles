@@ -29,11 +29,9 @@ call dein#add('rhysd/github-complete.vim')
 call dein#add('terryma/vim-multiple-cursors')
 call dein#add('tomasr/molokai')
 call dein#add('vimwiki/vimwiki')
-"call dein#add('tbabej/taskwiki')
-"call dein#add('powerman/vim-plugin-AnsiEsc')
-"call dein#add('farseer90718/vim-taskwarrior')
 call dein#add('sjl/gundo.vim')
-call dein#add('edkolev/tmuxline.vim')
+" call dein#add('metakirby5/codi.vim')
+call dein#add('christoomey/vim-tmux-navigator')
 call dein#add('neomake/neomake')
 
 " Unite:
@@ -48,6 +46,7 @@ call dein#add('mhartington/oceanic-next')
 call dein#add('ap/vim-css-color') 
 call dein#add('vim-airline/vim-airline-themes')
 call dein#add('mhartington/oceanic-next')
+
 
 " Autocomplete:
 call dein#add('Shougo/deoplete.nvim')
@@ -68,8 +67,6 @@ call dein#add('ryanoasis/vim-devicons')
 
 " Specify revision/branch/tag:
 call dein#add('Shougo/vimshell')
-call dein#add('godlygeek/tabular')
-call dein#add('plasticboy/vim-markdown')
 
 " Required:
 call dein#end()
@@ -100,6 +97,8 @@ let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const
 "	let g:go_highlight_interfaces = 1
 "	let g:go_highlight_operators = 1
 "	let g:go_highlight_build_constraints = 1
+"	let g:go_term_enabled = 1
+	let g:go_auto_type_info = 1
 	let g:go_fmt_command = "goimports" " Is buggy
 
 set foldmethod=syntax
@@ -121,19 +120,26 @@ let g:deoplete#sources#go = 'vim-go'
 	"nnoremap <C-H> <C-W><C-H>
 	
 " Vim color:
-	let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-	let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
-	if (has("termguicolors"))
-		set termguicolors
-	endif
-	syntax enable
-	colorscheme OceanicNext 
-	set background=dark
+	"let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+	"let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+	"syntax enable
+	"colorscheme OceanicNext
+	"set background=dark
 	"set cursorline "slows down bif files due to buffer rewrite
-	highlight MatchParen cterm=bold ctermbg=none ctermfg=red
+	"highlight MatchParen cterm=bold ctermbg=none ctermfg=red
 	"autocmd Filetype .* if getfsize(@%) > 999 | setlocal nocursorline
 	"			\setlocal lazyredraw | endif
 
+if (has("termguicolors"))
+ set termguicolors
+endif
+
+" Theme
+	syntax enable
+	colorscheme OceanicNext
+	set background=dark
+	let g:oceanic_next_terminal_italic = 1
+	let g:oceanic_next_terminal_bold = 1
 " GitGutter:
 	let g:gitgutter_sign_column_always = 1
 	let g:gitgutter_max_signs = 500
@@ -147,7 +153,7 @@ let g:deoplete#sources#go = 'vim-go'
 
 " Airline:
 	let g:airline#extensions#tabline#enabled = 1
-	let g:airline_theme = 'oceanicnext'  "'behelit'
+	let g:airline_theme='oceanicnext' "let g:airline_theme = 'behelit'
 	let g:airline_powerline_fonts = 1
 
 " Devicons:
@@ -205,6 +211,7 @@ let g:deoplete#sources#go = 'vim-go'
 	let g:unite_prompt='» '
 
 " Miscellaneous:
+let g:airline#extensions#tmuxline#enabled = 0
 imap <silent><expr> <TAB>
  \ pumvisible() ? "\<C-n>" :
  \ <SID>check_back_space() ? "\<TAB>" :
@@ -220,14 +227,8 @@ autocmd BufReadPost *
  \   exe "normal! g'\"" |
  \ endif
 
+
 autocmd BufRead * normal zz
 autocmd! BufWritePost * Neomake
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NREDTree") && b:NERDTree.isTree()) | q | endif
 
-let g:airline#extensions#tmuxline#enabled = 0
-
-
-"highlight Normal ctermbg=none
-"highlight NonText ctermbg=none
-
-"highlight Normal guibg=none
-"highlight NonText guibg=none
